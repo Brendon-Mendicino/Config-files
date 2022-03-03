@@ -10,7 +10,8 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'  " CVS
+Plug 'lervag/vimtex'
 
 call plug#end()
 

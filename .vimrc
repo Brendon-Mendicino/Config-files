@@ -16,8 +16,10 @@ Plug 'lervag/vimtex'
 call plug#end()
 
 
+filetype plugin indent on
+
 " Colors
-syntax on
+syntax enable
 set termguicolors
 colorscheme gruvbox
 set background=dark
@@ -26,7 +28,7 @@ filetype plugin on
 hi Normal ctermbg=none
 hi Terminal ctermbg=none
 
-set encoding=utf-8
+set encoding=utf8
 
 
 " Improve performance
@@ -111,3 +113,7 @@ let g:airline_symbols.dirty='⚡'
 "" Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+
+"" VimTex
+" for text concealing ~> replaces expressions with unicode symbols
+set conceallevel=2

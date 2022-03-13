@@ -36,6 +36,7 @@ set encoding=utf8
 
 "" UI
 set noerrorbells
+set belloff=all
 set number
 set relativenumber
 set cursorline
@@ -86,6 +87,19 @@ let mapleader = " "
 "" YCM
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 set completeopt-=preview
+
+let g:ycm_complete_in_comments_and_strings=1
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+"This assumes your kernel directory has the word 'kernel'
+if getcwd() =~ "kernel"
+    let g:ycm_global_ycm_extra_conf='~/ycm_extra_conf_kernel.py'
+else
+    let g:ycm_global_ycm_extra_conf='~/ycm_extra_conf.py'
+endif
+
 
 
 "" Airline

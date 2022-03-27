@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'  " CVS
 Plug 'lervag/vimtex'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -131,3 +133,11 @@ map <C-n> :NERDTreeToggle<CR>
 "" VimTex
 " for text concealing ~> replaces expressions with unicode symbols
 set conceallevel=2
+
+
+"" UltiSnips
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwordTrigger="<c-z>"
+

@@ -124,3 +124,6 @@ fi
 PATH=$PATH:$HOME/.scripts:$HOME/.clion/clion/bin
 export PATH
 
+EDITOR=vim
+export EDITOR
+

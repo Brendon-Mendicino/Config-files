@@ -21,11 +21,19 @@
 
 \RequirePackage[listings,breakable,skins,theorems]{tcolorbox}
 
+% Code listing
+\usepackage{listings}
+\usepackage{xcolor}
+
+
 \RequirePackage{hyperref}
 \RequirePackage[all]{hypcap}
 
 
-%% TIKZ %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                TIKZ                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \tikzstyle{block} = [
     draw,
     fill=white,
@@ -45,7 +53,11 @@
 %% MATH ENV %%
 \newenvironment{system}{ \left\{ \begin{array}{ll}}{\end{array} \right.}
 
-%% TCOLORBOX DEFINITIONS %%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        TCOLORBOX DEFINITIONS                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % tcolorbox main an accent colors
 \newcommand\mainc[1]{#1!12}
 \newcommand\accc[1]{#1!50!black}
@@ -99,3 +111,35 @@
     separator sign dash,
     fonttitle=\bfseries}{the}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              LISTINGS                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% color definitions
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% code style
+\lstdefinestyle{mycodestyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mycodestyle}

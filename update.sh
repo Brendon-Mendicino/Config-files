@@ -6,3 +6,4 @@ cp ~/latex/notestyle.sty ~/Config-files/latex/notestyle.sty
 cp ~/.profile ~/Config-files/.profile
 cp ~/.bashrc ~/Config-files/.bashrc
 cp ~/.config/fish/config.fish ~/Config-files/.config/fish/config.fish
+cp ~/.scripts -r ~/Config-files/.scripts

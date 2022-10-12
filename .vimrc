@@ -73,7 +73,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set laststatus=2
 
 " Copy-paste inside vim
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 
 ""FINDING FILES
@@ -134,9 +134,17 @@ map <C-n> :NERDTreeToggle<CR>
 " for text concealing ~> replaces expressions with unicode symbols
 set conceallevel=2
 
+" to enable YCM
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
+
+
 
 "" UltiSnips
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwordTrigger="<c-z>"
+

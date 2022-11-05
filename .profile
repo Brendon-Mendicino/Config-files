@@ -25,3 +25,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# start dropbox deamon
+if [ -f ~/.dropbox-dist/dropboxd ] ; then
+    ~/.dropbox-dist/dropboxd &
+fi

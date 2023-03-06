@@ -23,7 +23,7 @@ parser = OptionParser(usage=usage)
 parser.add_option(
     '-i', '--input',
     dest='inputfile',
-    metavar='FILE',
+    metavar='DIRECTORY',
     help='input file',
 )
 parser.add_option(

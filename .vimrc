@@ -45,6 +45,9 @@ set cursorline
 set showcmd
 set splitbelow splitright
 
+" for linebrak a the end of every line
+"set linebreak
+
 
 "" Backup
 set noswapfile

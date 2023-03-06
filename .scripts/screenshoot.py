@@ -12,15 +12,9 @@ STARTING_DIR = '/home/brendon/uni/appunti'
 SCREENSHOT_DIR = '/home/brendon/Pictures'
 SEC_IN_A_MIN = 60
 
-locations = {
-    'ele': '/home/brendon/uni/appunti/elap/img',
-    'con': '/home/brendon/uni/appunti/controlli/img',
-    'rel': '/home/brendon/uni/tirocinio/relazione/img',
-    'arch': '/home/brendon/uni/magistrale/architettura/appunti/img',
-    'data2': '/home/brendon/uni/magistrale/data2/appunti/img',
-    'reti2': '/home/brendon/uni/magistrale/reti2/appunti/img',
-    'security': '/home/brendon/uni/magistrale/security/appunti/img',
-}
+NOTES_DIR = '/home/brendon/uni/appunti'
+
+locations = {path: f'{NOTES_DIR}/{path}' for path in os.listdir(NOTES_DIR)} 
 
 
 images = sorted(os.listdir(SCREENSHOT_DIR))
@@ -199,6 +193,7 @@ def main():
         answer = input("Choose 'listen mode' (l) or 'move mode' (m): ")
 
         if answer not in menu_choises.keys():
+            print('Wrong input!')
             continue
 
         menu_choises[answer]()
@@ -208,3 +203,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
